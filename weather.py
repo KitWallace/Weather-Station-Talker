@@ -11,7 +11,8 @@ class Weather :
      "Mon":"Monday","Tue":"Tuesday","Wed":"Wednesday","Thu":"Thursday","Fri":"Friday","Sat":"Saturday","Sun":"Sunday",
      "NNE":"Nor Nor East","NE":"Nor East","ENE":"East Nor East","ESE":"East Sow East", 
      "SE":"Sow East" ,"SSE" :"Sow Sow East", "SSW":"Sow Sow West","SW":"Sow West","WSW":"West Sow West",
-     "WNW":"West Nor West","NW":"Nor West","NNW":"Nor Nor West"
+     "WNW":"West Nor West","NW":"Nor West","NNW":"Nor Nor West",
+     "%":"percent"
      }
 
   def __init__(self,id,url,rate) :
@@ -50,5 +51,9 @@ class Weather :
   def get_baro(self) :
       self.refresh()
       return "Barometer is " + str(int(float(self.baro))) 
+
+  def get_temp(self) :
+      self.refresh()
+      return "Temperature " + self.outdoor_temp + " degrees C : humidity "  + self.humidity + "%" 
   
 

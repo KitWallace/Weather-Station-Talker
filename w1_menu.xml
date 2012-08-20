@@ -1,0 +1,18 @@
+<menu name="weather" title="Weather Stations">
+    <item title="Alveston Weather" name="Alveston" url="http://www.alvestonweather.co.uk/clientraw.txt">
+        <item action="target.get_wind_speed()"  target="Alveston" title="Windspeed"/>
+        <item action="target.get_baro()"  target="Alveston" title="Barometer"/>
+        <item action="target.get_temp()"  target="Alveston" title="Temperature"/>
+     </item>
+    <item  title="Horfield Weather" name="Horfield" url="http://www.martynhicks.co.uk/weather/clientraw.txt">
+        <item action="target.get_wind_speed()"  target="Horfield" title="Windspeed"/>
+        <item action="target.get_baro()"  target="Horfield" title="Barometer"/>
+        <item action="target.get_temp()"  target="Horfield" title="Temperature"/>
+    </item>
+    <item  title="Scott Base Weather" name="Antarctica" url="http://www.antarcticanz.govt.nz/weather/SBweather/clientraw.txt">
+        <item action="target.get_wind_speed()"  target="Antarctica" title="Windspeed"/>
+        <item action="target.get_baro()"  target="Antarctica" title="Barometer"/>
+        <item action="target.get_temp()"  target="Antarctica" title="Temperature"/>
+     </item>
+</menu>
+
