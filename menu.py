@@ -2,7 +2,7 @@
 
 from xml.dom.minidom import parse
 import presenter
-from xmlutils import remove_whitespace_nodes
+import xmlutils
 
 class Menu :
   """ a menu represents a menu and its current status 
@@ -25,8 +25,15 @@ class Menu :
     self.name = name
     doc = parse(name +"_menu.xml")
     self.root = doc.firstChild  #  menu 
-    remove_whitespace_nodes(self.root)  
+    xmlutils.remove_whitespace_nodes(self.root) 
+    xmlutils.mark_ids(self.root) 
     self.current = self.root
+  
+  def item(self,id) :
+    try :
+      return self.root.ownerDocument.getElementById(id)
+    except :
+      pass
 
   def move (self,action) :
     """Using action, move the current position in the menu left ,right, up or down the tree
@@ -79,3 +86,4 @@ class Menu :
           exit()
        else :
           visit(self.current)
+

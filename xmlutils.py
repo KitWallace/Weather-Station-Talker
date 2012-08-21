@@ -28,9 +28,16 @@ def remove_whitespace_nodes(node, unlink=False):
         if unlink:
             node.unlink()
 
-def get_elements(node,tag) :
-   return  node.getElementsByTagName(tag)
+def mark_ids(node) :
+   """ mark id attributes as IDs so that getElementById() works 
+   
+   """
+   try:
+     node.setIdAttribute("id")
+   except:
+     pass
 
-def get_value(node,tag) :
-   return get_elements(node,tag)[0].firstChild.nodeValue
+   for child in node.childNodes :
+       mark_ids(child)
+
 
