@@ -36,11 +36,9 @@ class Weather :
         self.baro = data[6]
         self.last_update = time.strftime('%H:%M:%S')
         self.ts = time.time()
-      except IOError :
+      except :
         pass
-      except IndexError :
-        pass
-    else :
+   else :
        pass
   
   def get_wind_speed(self) :
