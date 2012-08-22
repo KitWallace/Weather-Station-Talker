@@ -1,4 +1,4 @@
-This application fetches data form remote amateur weather stations and vocalised data selected using a Presenter.
+This application fetches data form remote amateur weather stations and vocalised data selected using a Presenter or Keyboard Cursor keys.
 
 > python station_talk.py w1
 
