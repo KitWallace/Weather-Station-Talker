@@ -1,18 +1,18 @@
 <menu name="weather" title="Weather Stations">
-    <item title="Alveston Weather" id="Alveston" url="http://www.alvestonweather.co.uk/clientraw.txt" refresh="60">
-        <item action="station('Alveston').get_wind_speed()" title="Windspeed"/>
-        <item action="station('Alveston').get_baro()"  title="Barometer"/>
-        <item action="station('Alveston').get_temp()"  title="Temperature"/>
-     </item>
     <item  title="Horfield Weather" id="Horfield" url="http://www.martynhicks.co.uk/weather/clientraw.txt" refresh="30">
         <item action="station('Horfield').get_wind_speed()"  title="Windspeed"/>
         <item action="station('Horfield').get_baro()"  title="Barometer"/>
         <item action="station('Horfield').get_temp()" title="Temperature"/>
     </item>
-    <item  title="Scott Base Weather" id="Antarctica" url="http://www.antarcticanz.govt.nz/weather/SBweather/clientraw.txt" refresh="240">
-        <item action="station('Antarctica').get_wind_speed()"   title="Windspeed"/>
-        <item action="station('Antarctica').get_baro()"  title="Barometer"/>
-        <item action="station('Antarctica').get_temp()"  title="Temperature"/>
+    <item title="Gibraltar Weather" id="Gibraltar" url="http://www.gibraltarweather.com/clientraw.txt" refresh="60">
+        <item action="station('Gibraltar').get_wind_speed()" title="Windspeed"/>
+        <item action="station('Gibraltar').get_baro()"  title="Barometer"/>
+        <item action="station('Gibraltar').get_temp()"  title="Temperature"/>
+     </item>
+     <item  title="Wellington Weather" id="Wellington" url="http://joker.41south.net.nz/weather/clientraw.txt" refresh="60">
+        <item action="station('Wellington').get_wind_speed()"   title="Windspeed"/>
+        <item action="station('Wellington').get_baro()"  title="Barometer"/>
+        <item action="station('Wellington').get_temp()"  title="Temperature"/>
      </item>
 </menu>
 

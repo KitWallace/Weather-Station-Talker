@@ -36,22 +36,24 @@ class Weather :
         self.baro = data[6]
         self.last_update = time.strftime('%H:%M:%S')
         self.ts = time.time()
-      except :
+      except IOError :
         pass
-   else :
+      except IndexError :
+        pass
+    else :
        pass
   
   def get_wind_speed(self) :
       self.refresh()
       dir = conv.degree_to_compass_point(int(self.direction))
-      return "Wind speed "+ self.wind_speed + " knots from the "+ dir 
+      return self.id +" Wind speed "+ self.wind_speed + " knots from the "+ dir 
   
   def get_baro(self) :
       self.refresh()
-      return "Barometer is " + str(int(float(self.baro))) 
+      return self.id + " Barometer is " + str(int(float(self.baro))) 
 
   def get_temp(self) :
       self.refresh()
-      return "Temperature " + self.outdoor_temp + " degrees C : humidity "  + self.humidity + "%" 
+      return self.id + " Temperature " + self.outdoor_temp + " degrees C : humidity "  + self.humidity + "%" 
   
 
