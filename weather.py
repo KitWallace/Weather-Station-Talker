@@ -36,9 +36,7 @@ class Weather :
         self.baro = data[6]
         self.last_update = time.strftime('%H:%M:%S')
         self.ts = time.time()
-      except IOError :
-        pass
-      except IndexError :
+      except :
         pass
     else :
        pass
